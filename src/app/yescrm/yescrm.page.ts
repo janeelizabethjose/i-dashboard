@@ -69,6 +69,7 @@ barChartMethod() {
   }
 
   doughnutChartMethod() {
+    // change later
     this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
       type: 'doughnut',
       data: {
