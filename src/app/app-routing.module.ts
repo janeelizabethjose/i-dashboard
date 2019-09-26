@@ -4,8 +4,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'home',
@@ -17,7 +21,9 @@ const routes: Routes = [
   },
   { path: 'yescrm', loadChildren: './yescrm/yescrm.module#YescrmPageModule' },
   { path: 'otrs', loadChildren: './otrs/otrs.module#OtrsPageModule' },
-  { path: 'jira', loadChildren: './jira/jira.module#JiraPageModule' }
+  { path: 'jira', loadChildren: './jira/jira.module#JiraPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' }
 ];
 
 @NgModule({
