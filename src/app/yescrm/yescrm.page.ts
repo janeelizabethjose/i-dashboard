@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import {  MenuController } from '@ionic/angular';
 import { Chart } from 'chart.js';
+
+import { AuthenticationService } from '../services/Authentication.service';
 
 @Component({
   selector: 'app-yescrm',
@@ -10,15 +13,15 @@ export class YescrmPage implements OnInit {
   barChart: any;
   doughnutChart: any;
   lineChart: any;
-  //ElementRef: any;
 
   @ViewChild('barCanvas', {static: true}) barCanvas : ElementRef;
   @ViewChild('doughnutCanvas', {static: true}) doughnutCanvas : ElementRef;
   @ViewChild('lineCanvas', {static: true}) lineCanvas: ElementRef;
-
-
-  
-  constructor() { }
+ 
+  constructor(
+    public authService: AuthenticationService,
+    public menuCtrl: MenuController
+  ) { }
 
   ngOnInit() {
   }
@@ -29,7 +32,15 @@ export class YescrmPage implements OnInit {
     this.lineChartMethod();
   }
 
-barChartMethod() {
+  ionViewWillEnter() {
+    this.menuCtrl.enable(true);
+  }
+
+  logout() {
+    this.authService.logout();
+  }
+
+  barChartMethod() {
     this.barChart = new Chart(this.barCanvas.nativeElement, {
       type: 'bar',
       data: {

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -13,13 +14,14 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
   },
-  { path: 'yescrm', loadChildren: './yescrm/yescrm.module#YescrmPageModule' },
+  { path: 'yescrm', loadChildren: './yescrm/yescrm.module#YescrmPageModule',canActivate: [AuthGuardService]},
   { path: 'otrs', loadChildren: './otrs/otrs.module#OtrsPageModule' },
   { path: 'jira', loadChildren: './jira/jira.module#JiraPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },

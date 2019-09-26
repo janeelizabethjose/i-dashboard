@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {  MenuController } from '@ionic/angular';
+
+import { AuthenticationService } from '../services/Authentication.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +10,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    public menuCtrl: MenuController,
+    private authService: AuthenticationService
+  ) {}
 
+  ionViewWillEnter() {
+    this.menuCtrl.enable(true);
+  }
+
+  logout() {
+    this.authService.logout();
+  }
 }
