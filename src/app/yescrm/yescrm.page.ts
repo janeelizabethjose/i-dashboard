@@ -44,17 +44,17 @@ export class YescrmPage implements OnInit {
     this.barChart = new Chart(this.barCanvas.nativeElement, {
       type: 'bar',
       data: {
-        labels: ['BJP', 'INC', 'AAP', 'CPI', 'CPI-M', 'NCP'],
+        labels: ['Open', 'In Progress', 'WCR', 'Pending', 'Cancelled', 'Closed'],
         datasets: [{
-          label: '# of Votes',
-          data: [200, 50, 30, 15, 20, 34],
+          label: '# of Tickets',
+          data: [250, 130, 80, 40, 60, 180],
           backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
+            'rgba(255, 99, 132, 5)',
+            'rgba(54, 162, 235, 5)',
+            'rgba(255, 206, 86, 5)',
+            'rgba(75, 192, 192, 5)',
+            'rgba(153, 102, 255, 5)',
+            'rgba(255, 159, 64, 5)'
           ],
           borderColor: [
             'rgba(255,99,132,1)',
@@ -84,16 +84,16 @@ export class YescrmPage implements OnInit {
     this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
       type: 'doughnut',
       data: {
-        labels: ['BJP', 'Congress', 'AAP', 'CPM', 'SP'],
+        labels: ['BSSOSS', 'DEALER HELPDESK', 'MyYes4G', 'PRODUCT MARKETING', 'RETENTION TEAM'],
         datasets: [{
-          label: '# of Votes',
-          data: [50, 29, 15, 10, 7],
+          label: '# of Tickets',
+          data: [50, 78, 152, 35, 99],
           backgroundColor: [
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)'
+            'rgba(255, 159, 64)',
+            'rgba(255, 99, 132)',
+            'rgba(255, 206, 86)',
+            'rgba(75, 192, 192)',
+            'rgba(153, 102, 255)',
           ],
           hoverBackgroundColor: [
             '#FFCE56',
@@ -114,7 +114,7 @@ export class YescrmPage implements OnInit {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December'],
         datasets: [
           {
-            label: 'Sell per week',
+            label: 'Open Tickets',
             fill: false,
             lineTension: 0.1,
             backgroundColor: 'rgba(75,192,192,0.4)',
@@ -132,11 +132,11 @@ export class YescrmPage implements OnInit {
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data: [65, 59, 80, 81, 56, 55, 40, 10, 5, 50, 10, 15],
+            data: [65, 59, 80, 81, 56, 55, 40, 10, 45, 50, 10, 15],
             spanGaps: false,
           },
           {
-            label: 'Sell per week',
+            label: 'Closed Tickets',
             fill: false,
             lineTension: 0.1,
             backgroundColor: 'rgba(231,92,170)',
@@ -155,6 +155,28 @@ export class YescrmPage implements OnInit {
             pointRadius: 1,
             pointHitRadius: 10,
             data: [60, 30, 75, 72, 45, 32, 34, 8, 3, 42, 7, 13],
+            spanGaps: false,
+          },
+          {
+            label: 'Re-Open Tickets',
+            fill: false,
+            lineTension: 0.1,
+            backgroundColor: 'rgba(222, 130, 50)',
+            borderColor: 'rgba(222, 130, 50)',
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: 'rgba(222, 130, 50)',
+            pointBackgroundColor: '#fff',
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: 'rgba(222, 130, 50)',
+            pointHoverBorderColor: 'rgba(222, 130, 50)',
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data: [10, 5, 15, 2, 24, 8, 32, 5, 1, 7, 7, 2],
             spanGaps: false,
           }
         ]

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { CanActivate } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { AuthenticationService } from './Authentication.service';
 
 @Injectable({
@@ -9,9 +10,19 @@ import { AuthenticationService } from './Authentication.service';
 export class AuthGuardService {
 
   constructor(
+    private router: Router,
     public authenticationService: AuthenticationService
   ) { }
-  canActivate(): boolean {
-    return this.authenticationService.isAuthenticated();
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+      const currentUser = this.authenticationService.isLoggedIn;
+      if (currentUser) {
+          // authorised so return true
+          return true;
+      }
+      // not logged in so redirect to login page with the return url
+      this.router.navigate(['/login']);
+      return false;
   }
 }
