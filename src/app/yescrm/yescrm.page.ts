@@ -44,28 +44,153 @@ export class YescrmPage implements OnInit {
     this.barChart = new Chart(this.barCanvas.nativeElement, {
       type: 'bar',
       data: {
-        labels: ['Open', 'In Progress', 'WCR', 'Pending', 'Cancelled', 'Closed'],
+        labels: ['BSSOSS', 'DEALER HELPDESK', 'MyYes4G', 'PRODUCT MARKETING', 'RETENTION TEAM'],
         datasets: [{
-          label: '# of Tickets',
-          data: [250, 130, 80, 40, 60, 180],
+          label: '2015',
+          data: [20, 10, 0, 40, 60, 15],
           backgroundColor: [
             'rgba(255, 99, 132, 5)',
-            'rgba(54, 162, 235, 5)',
-            'rgba(255, 206, 86, 5)',
-            'rgba(75, 192, 192, 5)',
-            'rgba(153, 102, 255, 5)',
-            'rgba(255, 159, 64, 5)'
+            'rgba(255, 99, 132, 5)',
+            'rgba(255, 99, 132, 5)',
+            'rgba(255, 99, 132, 5)',
+            'rgba(255, 99, 132, 5)',
+            //'rgba(54, 162, 235, 5)',
+            // 'rgba(255, 206, 86, 5)',
+            // 'rgba(75, 192, 192, 5)',
+            // 'rgba(153, 102, 255, 5)',
+            // 'rgba(255, 159, 64, 5)'
           ],
           borderColor: [
             'rgba(255,99,132,1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
+            'rgba(255,99,132,1)',
+            'rgba(255,99,132,1)',
+            'rgba(255,99,132,1)',
+            'rgba(255,99,132,1)',
+            //'rgba(54, 162, 235, 1)',
+            // 'rgba(255, 206, 86, 1)',
+            // 'rgba(75, 192, 192, 1)',
+            // 'rgba(153, 102, 255, 1)',
+            // 'rgba(255, 159, 64, 1)'
           ],
           borderWidth: 1
-        }]
+        },
+        {
+          label: '2016',
+          data: [20, 30, 0, 50, 90, 10],
+          backgroundColor: [
+            //'rgba(255, 99, 132, 5)',
+            'rgba(54, 162, 235, 5)',
+            'rgba(54, 162, 235, 5)',
+            'rgba(54, 162, 235, 5)',
+            'rgba(54, 162, 235, 5)',
+            'rgba(54, 162, 235, 5)',
+            // 'rgba(255, 206, 86, 5)',
+            // 'rgba(75, 192, 192, 5)',
+            // 'rgba(153, 102, 255, 5)',
+            // 'rgba(255, 159, 64, 5)'
+          ],
+          borderColor: [
+            //'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(54, 162, 235, 1)',
+            // 'rgba(255, 206, 86, 1)',
+            // 'rgba(75, 192, 192, 1)',
+            // 'rgba(153, 102, 255, 1)',
+            // 'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        },
+        {
+          label: '2017',
+          data: [40, 60, 0, 90, 65, 112],
+          backgroundColor: [
+            //'rgba(255, 99, 132, 5)',
+            //'rgba(54, 162, 235, 5)',
+            'rgba(255, 206, 86, 5)',
+            'rgba(255, 206, 86, 5)',
+            'rgba(255, 206, 86, 5)',
+            'rgba(255, 206, 86, 5)',
+            'rgba(255, 206, 86, 5)',
+            // 'rgba(75, 192, 192, 5)',
+            // 'rgba(153, 102, 255, 5)',
+            // 'rgba(255, 159, 64, 5)'
+          ],
+          borderColor: [
+            //'rgba(255,99,132,1)',
+            //'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(255, 206, 86, 1)',
+            // 'rgba(75, 192, 192, 1)',
+            // 'rgba(153, 102, 255, 1)',
+            // 'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        },
+        {
+          label: '2018',
+          data: [20, 45, 0, 32, 78, 122],
+          backgroundColor: [
+            //'rgba(255, 99, 132, 5)',
+            //'rgba(54, 162, 235, 5)',
+            //'rgba(255, 206, 86, 5)',
+            'rgba(75, 192, 192, 5)',
+            'rgba(75, 192, 192, 5)',
+            'rgba(75, 192, 192, 5)',
+            'rgba(75, 192, 192, 5)',
+            'rgba(75, 192, 192, 5)',
+            // 'rgba(153, 102, 255, 5)',
+            // 'rgba(255, 159, 64, 5)'
+          ],
+          borderColor: [
+            //'rgba(255,99,132,1)',
+            //'rgba(54, 162, 235, 1)',
+            //'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(75, 192, 192, 1)',
+            // 'rgba(153, 102, 255, 1)',
+            // 'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        },
+        {
+          label: '2019',
+          data: [78, 56, 178, 23, 120, 111],
+          backgroundColor: [
+            //'rgba(255, 99, 132, 5)',
+            //'rgba(54, 162, 235, 5)',
+            //'rgba(255, 206, 86, 5)',
+            //'rgba(75, 192, 192, 5)',
+            'rgba(153, 102, 255, 5)',
+            'rgba(153, 102, 255, 5)',
+            'rgba(153, 102, 255, 5)',
+            'rgba(153, 102, 255, 5)',
+            'rgba(153, 102, 255, 5)',
+            // 'rgba(255, 159, 64, 5)'
+          ],
+          borderColor: [
+            //'rgba(255,99,132,1)',
+            //'rgba(54, 162, 235, 1)',
+            //'rgba(255, 206, 86, 1)',
+            //'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(153, 102, 255, 1)',
+            // 'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        },
+      ]
       },
       options: {
         scales: {
@@ -84,7 +209,7 @@ export class YescrmPage implements OnInit {
     this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
       type: 'doughnut',
       data: {
-        labels: ['BSSOSS', 'DEALER HELPDESK', 'MyYes4G', 'PRODUCT MARKETING', 'RETENTION TEAM'],
+        labels: ['Open', 'In Progress', 'WCR', 'Pending', 'Closed'],
         datasets: [{
           label: '# of Tickets',
           data: [50, 78, 152, 35, 99],

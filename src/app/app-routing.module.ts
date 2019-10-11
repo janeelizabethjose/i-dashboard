@@ -25,7 +25,9 @@ const routes: Routes = [
   { path: 'otrs', loadChildren: './otrs/otrs.module#OtrsPageModule' },
   { path: 'jira', loadChildren: './jira/jira.module#JiraPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' }
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' }
+
 ];
 
 @NgModule({

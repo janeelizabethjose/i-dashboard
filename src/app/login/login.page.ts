@@ -13,6 +13,7 @@ import { LoadingController } from '@ionic/angular';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+
 export class LoginPage implements OnInit {
   isLoading = false;
   constructor( 
@@ -45,28 +46,22 @@ export class LoginPage implements OnInit {
     return await registerModal.present();
   }
 
-  login(form: NgForm) {
-    // this.isLoading = true;
-    // this.loadingController.create({
-    //   message: 'Please wait....',
-    // }).then((res) => {
-    //   res.present();
-    // });
-    if(form.value.email && form.value.password){
-      this.authService.login(form.value.email, form.value.password).subscribe(
-        data => {
-          if( data['status'] == 'Success' ) {
-            this.navCtrl.navigateRoot('/home');
-          }else{
-            this.alertService.presentToast('Invalid Email Address or Password');
-          }
-        },
-        error => {
-          console.log(error);
-        }
-      );
-    }else{
-      this.alertService.presentToast('Please Enter Your Username and Password!');
-    }
-  }
+  // login(form: NgForm) {
+  //   if(form.value.email && form.value.password){
+  //     this.authService.login(form.value.email, form.value.password).subscribe(
+  //       data => {
+  //         if( data['status'] == 'Success' ) {
+  //           this.navCtrl.navigateRoot('/home');
+  //         }else{
+  //           this.alertService.presentToast('Invalid Email Address or Password');
+  //         }
+  //       },
+  //       error => {
+  //         console.log(error);
+  //       }
+  //     );
+  //   }else{
+  //     this.alertService.presentToast('Please Enter Your Username and Password!');
+  //   }
+  // }
 }

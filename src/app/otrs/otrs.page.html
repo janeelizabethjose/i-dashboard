@@ -13,11 +13,33 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-      <ion-card-header color="medium">
-        Stay Tuned for Something Awesome!
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        <h1 style="font-size:1.2em">Tickets per Group</h1>
       </ion-card-header>
       <ion-card-content>
+        <canvas #barCanvas></canvas>
       </ion-card-content>
-  </ion-card>
+    </ion-card>
+   
+    <ion-card>
+      <ion-card-header>
+        <h1 style="font-size:1.2em">Total Open, Pending & Closed Tickets per Month</h1>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        <h1 style="font-size:1.2em">Ticket Based on Status</h1>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #doughnutCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
 </ion-content>
